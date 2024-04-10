@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block titulo %} Contatos {% endblock %}
+
+{% block conteudo %}
+    <form action="">
+        <label for="fname">Nome:</label><br>
+        <input type="text" id="fname" name="fname" value="jonh">
+        <br><br>
+        <label for="fsobrenome">Sobrenome:</label><br>
+        <input type="text" id="fsobrenome" name="fsobrenome" value="mcanroll">
+        <br><br>
+        <label for="fdescrição">Descrição</label><br>
+        <textarea name="fdescrição" id="fdescrição" cols="30" rows="10"></textarea>
+       
+    </form>
+{% endblock %}

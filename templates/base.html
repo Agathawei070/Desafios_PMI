@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block titulo %} base {% endblock %}</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='css/bootstrap.css')}}">
+    <link rel="stylesheet" href="{{url_for('static', filename='normalize.css')}}">
+    <style>
+      a{
+        font-family: Fantasy;
+        color: blue;
+      }
+      h3{
+        font-family: fantasy;
+      }
+      h1{
+        font-family: fantasy;
+        color: #2a4568
+      }
+      p{
+        font-family: Arial, Helvetica, sans-serif;
+      }
+
+      .container a{
+        color:#2a4568;
+      }
+
+      .navbar-brand a{
+        line-height:center;
+      }
+      .label{
+        color:#2a4568
+      }
+    </style>
+
+</head>
+<body style="max-width: 67%; margin:auto" >
+    <nav class="navbar -bs.background-tertiary", style="text-align: right; background-color:white;">
+        <div class="container">
+            <a class="navbar-brand" href="/">
+                <img src="{{url_for('static', filename='imagens/logo.png')}}" alt="logo" style="line-height: center;">
+            </a>
+              <span>  
+              <a class="navbar-brand" href="/">Home</a>
+                  <a class="navbar-brand" href="/quemsomos">Quem Somos</a>
+                  <a class="navbar-brand" href="/contatos">Contatos</a>
+              </span>
+        </div>
+    </nav>
+    <br>
+    {% block conteudo %}
+    {% endblock %}
+    
+    <script src="{{url_for('static', filename='js/bootstrap.js')}}"></script>
+  </body>
+  <footer style="text-align: center; color:#2a4568 ;">
+    <br>
+      <h3>Todos os direitos reservados </h3>
+
+  </footer>
+</html>
