@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% block titulo %} Curriculo {% endblock %}
+
+{% block conteudo %}
+<figure style="text-align: center;">
+<img src="{{url_for('static', filename='imagens/image.png')}}" alt="curriculo">
+<br>
+<br>
+<figcaption style="text-align: center;" >
+   <a href="{{url_for('static', filename='imagens/curriculo-TI.pdf')}}" download>
+    <button type="button" class="btn btn-outline-dark">Clique aqui para baixar</button>
+   </a>
+</figcaption>
+</figure>
+
+<br>
+<br>
+<br>  
+
+
+{% endblock %}
