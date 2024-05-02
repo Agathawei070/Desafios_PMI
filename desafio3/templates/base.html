@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Inicio</title>
     <link rel="stylesheet" href="{{url_for('static', filename='css/bootstrap.css')}}">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="{{url_for('static', filename='normalize.css')}}">
     <style>
       a{
@@ -29,14 +30,19 @@
 
       }
       
+      /* .contatos_grid{
+        display: flex;
+        flex-direction: table-row;
+        
+      }*/
     </style>
 
 </head>
-<body>
+<body style="min-height: 100vh; display: flex; flex-direction: column;">
             
             <nav class="navbar bg-black navbar-dark" style="width:100%">
                 <div class= "d-flex justify-content-start">
-                    <a href="/"><img style="width: 50px; height: auto; margin-left: 10px;" src="{{url_for('static', filename='imagens/logo-branco.png')}}" href="/" alt="logo"></a>
+                    <a href="/"><img style="width: 50px; height: auto; margin-left: 10px;" src="{{url_for('static', filename='imagens/logo_dourado.png')}}" href="/" alt="logo"></a>
                 </div>
                 <span class= "d-flex" style="margin-right: 37%;">
                 <a class="navbar-brand" style="font-size: 20px; " href="/">Inicio</a>
@@ -45,18 +51,24 @@
                 <a class="navbar-brand" style="font-size: 20px; " href="/contatos">Contatos</a>
                 </span>
             </nav> 
-    <br>
+  
     
     {% block conteudo %}
     {% endblock %}
+
+    <footer style="text-align: center; color: white ; background-color: black; height: 80px; margin-top: auto;">
+      <br>
+      <div >
+  
+      </div>
+       
+  
+    </footer>
+    
     
     <script src="{{url_for('static', filename='js/bootstrap.js')}}"></script>
 </body>
-  <footer style="text-align: center; color: white ; background-color: black; height: 80px;">
-    <br>
-      <h3>Todos os direitos reservados </h3>
 
-  </footer>
 </html>
 
 
